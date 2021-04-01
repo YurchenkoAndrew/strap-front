@@ -1,0 +1,55 @@
+mat-toolbar {
+  z-index: 999;
+  position: fixed;
+}
+.header {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin: .5rem;
+  .logo {
+    display: flex;
+    white-space: pre-wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 25%;
+    &-text {
+      font-size: 9px ;
+      margin: 0 10px;
+      line-height: 1rem;
+    }
+  }
+  .menu {
+    display: flex;
+    width: 50%;
+    ul {
+      list-style: none;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+      padding: 0;
+      li {
+        font-size: .8rem;
+        a {
+          text-decoration: none;
+          color: rgba(0, 0, 0, 0.87);
+        }
+      }
+    }
+  }
+  .phone {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 25%;
+    font-size: 1rem;
+    font-weight: bold;
+    p {
+      margin: 0;
+    }
+    img {
+      margin: 0 15px;
+    }
+  }
+}

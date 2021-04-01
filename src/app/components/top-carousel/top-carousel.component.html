@@ -1,0 +1,31 @@
+<div class="top-carousel">
+  <owl-carousel-o [options]="topCarouselOptions" #topCar>
+
+    <ng-container *ngFor="let slide of dataSlides">
+      <ng-template carouselSlide>
+        <div class="carousel-wrapper">
+          <img [src]="basePath + '/' + slide.image" [alt]="slide.title" [title]="slide.title">
+          <div class="description">
+            <div class="description-content">
+              <div class="description-content-block">
+                <h3>{{slide.title}}</h3>
+                <p>{{slide.description}}</p>
+                <div class="product-price">
+                  <a href="" class="button">Заказать</a>
+                  <p>{{slide.price}} ₸</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </ng-container>
+
+  </owl-carousel-o>
+  <div class="navigation-wrapper">
+    <div>
+      <a (click)="topCar.prev()"><mat-icon>west</mat-icon></a>
+      <a (click)="topCar.next()"><mat-icon>east</mat-icon></a>
+    </div>
+  </div>
+</div>

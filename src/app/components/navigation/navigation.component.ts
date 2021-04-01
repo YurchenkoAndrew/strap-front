@@ -1,4 +1,7 @@
 import {Component, OnInit} from '@angular/core';
+import {Setting} from '../../models/setting';
+import {SettingsService} from '../../data/services/settings.service';
+import {environment} from '../../../environments/environment';
 
 @Component({
   selector: 'app-navigation',
@@ -7,9 +10,21 @@ import {Component, OnInit} from '@angular/core';
 })
 export class NavigationComponent implements OnInit {
 
-  constructor() { }
+  setting!: Setting;
+  baseUrl = environment.baseUrl;
+
+  constructor(
+    private service: SettingsService
+  ) { }
 
   ngOnInit(): void {
+    this.initSetting();
+  }
+
+  initSetting(): void {
+    this.service.get(1).subscribe(response => {
+      this.setting = response;
+    });
   }
 
 }

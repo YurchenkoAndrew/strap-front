@@ -1,0 +1,40 @@
+
+.name-product {
+  font-size: 1.5rem;
+}
+
+.button-white {
+  color: #25282B;
+  border: #25282B solid 1px;
+  &:hover {
+    color: white;
+    background: black;
+  }
+}
+.button-black {
+  color: white;
+  border: white solid 1px;
+  &:hover {
+    color: black;
+    background: white;
+  }
+}
+
+.button {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 1rem 2rem;
+  border-radius: 32px;
+}
+
+.navigation-carousel-wrapper {
+  margin: 2rem 0 0 0;
+  div {
+    display: flex;
+    a {
+      margin: 0 10px;
+      cursor: pointer;
+    }
+  }
+}

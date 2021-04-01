@@ -1,1 +1,23 @@
-<p>navigation works!</p>
+<mat-toolbar>
+    <div class="header">
+      <div class="logo" *ngIf="setting">
+        <img src="{{baseUrl}}/{{setting.logo}}" alt="{{setting.name}}">
+          <p class="logo-text">{{setting.name}}</p>
+      </div>
+      <div class="menu">
+        <ul>
+          <li><a href="/">Виды ремешков</a></li>
+          <li><a href="/">Преимущества</a></li>
+          <li><a href="/">Товары</a></li>
+          <li><a href="/">Отзывы</a></li>
+          <li><a href="/">О нас</a></li>
+          <li><a href="/">Доставка и оплата</a></li>
+        </ul>
+      </div>
+      <div class="phone" *ngIf="setting">
+        <p class="phone-number">{{setting.phone}}</p>
+        <img src="assets/img/wp.svg" alt="whatsapp">
+        <img src="assets/img/inst.svg" alt="whatsapp">
+      </div>
+    </div>
+</mat-toolbar>

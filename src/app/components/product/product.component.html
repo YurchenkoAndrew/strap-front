@@ -1,0 +1,44 @@
+<div class="product-wrapper">
+  <div class="row g-0">
+    <ng-container *ngFor="let product of products">
+      <!--    Full blocks-->
+      <div class="col-md-6 carousel-wrapper"
+           *ngIf="product.block_type_id === 1 || product.block_type_id === 2 && product.images.length > 0">
+        <app-product-carousel
+          *ngIf="product.block_type_id === 1 || product.block_type_id === 2 && product.images.length > 0"
+          [product]="product"
+          [slideEvent]="slideEvent"
+        ></app-product-carousel>
+      </div>
+      <div class="col-md-6 description-wrapper" [class.black]="product.block_type_id === 2"
+           *ngIf="product.block_type_id === 1 || product.block_type_id === 2 && product.images.length > 0">
+        <app-product-description
+          *ngIf="product.block_type_id === 1 || product.block_type_id === 2 && product.images.length > 0"
+          [product]="product"
+          (slideEvent)="setSlideEvent($event)"
+        ></app-product-description>
+      </div>
+      <!--   End Full blocks-->
+      <!--&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+      <!--  Short blocks-->
+      <div class="col-md-3 carousel-wrapper"
+           *ngIf="product.block_type_id === 3 || product.block_type_id === 4 && product.images.length > 0"
+      >
+        <app-product-carousel-vertical
+          *ngIf="product.block_type_id === 3 || product.block_type_id === 4 && product.images.length > 0"
+          [product]="product"
+        ></app-product-carousel-vertical>
+      </div>
+      <div class="col-md-3 description-wrapper" [class.black]="product.block_type_id === 4"
+           *ngIf="product.block_type_id === 3 || product.block_type_id === 4 && product.images.length > 0"
+      >
+        <app-product-description
+          *ngIf="product.block_type_id === 3 || product.block_type_id === 4 && product.images.length > 0"
+          [product]="product"
+          (slideEvent)="setSlideEvent($event)"
+        ></app-product-description>
+      </div>
+      <!-- End Short blocks-->
+    </ng-container>
+  </div>
+</div>

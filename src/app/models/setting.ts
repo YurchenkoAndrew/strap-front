@@ -1,6 +1,6 @@
 import {Common} from './common';
 
-export class Settings extends Common {
+export class Setting extends Common {
   constructor(id: number, sort: number, logo: string, name: string, address: string, phone: string, whatsapp?: string, instagram?: string) {
     super(id, sort);
     this.logo = logo;

@@ -1,0 +1,17 @@
+.navigation-carousel-wrapper {
+  position: absolute;
+  bottom: 10px;
+  right: -20%;
+  z-index: 100;
+  div{
+    a {
+      margin: 1rem;
+      cursor: pointer;
+    }
+  }
+}
+.nav-white {
+  a{
+    color: white;
+  }
+}

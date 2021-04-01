@@ -1,0 +1,22 @@
+<div class="image">
+  <owl-carousel-o [options]="bFoolCarouselOptions" #prodCarVert>
+
+    <ng-container *ngFor="let item of product.images">
+      <ng-template carouselSlide>
+        <img src="{{baseUrl}}/{{item.image_vertical}}" alt="{{item.name}}">
+      </ng-template>
+    </ng-container>
+
+  </owl-carousel-o>
+</div>
+
+<div class="navigation-carousel-wrapper">
+  <div [class.nav-white]="product.block_type_id === 4">
+    <a (click)="prodCarVert.prev()">
+      <mat-icon>west</mat-icon>
+    </a>
+    <a (click)="prodCarVert.next()">
+      <mat-icon>east</mat-icon>
+    </a>
+  </div>
+</div>

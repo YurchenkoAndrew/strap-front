@@ -1,5 +1,5 @@
 import {CommonDao} from './common-dao';
-import {Settings} from '../../models/settings';
+import {Setting} from '../../models/setting';
 
-export interface SettingsDao extends CommonDao<Settings> {
+export interface SettingsDao extends CommonDao<Setting> {
 }
