@@ -22,6 +22,12 @@ import {ProductComponent} from './components/product/product.component';
 import {ProductDescriptionComponent} from './components/product/product-description/product-description.component';
 import {ProductCarouselHorizontalComponent} from './components/product/product-carousel-horizontal/product-carousel-horizontal.component';
 import {ProductCarouselVerticalComponent} from './components/product/product-carousel-vertical/product-carousel-vertical.component';
+import {OurAdvantagesComponent} from './components/our-advantages/our-advantages.component';
+import {OUR_ADVANTAGE_URL_TOKEN} from './data/services/our-advantage.service';
+import {SliderProductsComponent} from './components/slider-products/slider-products.component';
+import {SLIDER_PRODUCT_URL_TOKEN} from './data/services/slider-product.service';
+import {REVIEW_URL_TOKEN} from './data/services/review.service';
+import {ReviewComponent} from './components/review/review.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +40,9 @@ import {ProductCarouselVerticalComponent} from './components/product/product-car
     ProductDescriptionComponent,
     ProductCarouselHorizontalComponent,
     ProductCarouselVerticalComponent,
+    OurAdvantagesComponent,
+    SliderProductsComponent,
+    ReviewComponent,
   ],
   imports: [
     BrowserModule,
@@ -61,6 +70,18 @@ import {ProductCarouselVerticalComponent} from './components/product/product-car
     {
       provide: PRODUCT_URL_TOKEN,
       useValue: `${environment.baseUrlApi}/products`
+    },
+    {
+      provide: OUR_ADVANTAGE_URL_TOKEN,
+      useValue: `${environment.baseUrlApi}/our-advantage`
+    },
+    {
+      provide: SLIDER_PRODUCT_URL_TOKEN,
+      useValue: `${environment.baseUrlApi}/slider-products`
+    },
+    {
+      provide: REVIEW_URL_TOKEN,
+      useValue: `${environment.baseUrlApi}/reviews`
     },
   ],
   bootstrap: [AppComponent]

@@ -1,0 +1,20 @@
+.title-section {
+  text-align: center;
+  font-size: 2rem;
+  padding: 88px 0;
+}
+.slider-products-wrapper {
+  position: relative;
+}
+.btn-prev {
+  position: absolute;
+  left: 0;
+  bottom: 40%;
+  z-index: 100;
+}
+.btn-next {
+  position: absolute;
+  right: 0;
+  bottom: 40%;
+  z-index: 100;
+}

@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h3 class="title-section">Наши товары</h3>
+    </div>
+  </div>
+</div>
+<div class="slider-products-wrapper">
+  <owl-carousel-o [options]="sliderProductsOptions" #topCar>
+
+    <ng-container *ngFor="let slide of slides">
+      <ng-template carouselSlide>
+        <div class="slider-products">
+          <img [src]="basePath + '/' + slide.image" [alt]="slide.name" [title]="slide.name">
+        </div>
+      </ng-template>
+    </ng-container>
+
+  </owl-carousel-o>
+  <button mat-mini-fab color="accent" (click)="topCar.prev()" class="btn-prev">
+    <mat-icon>west</mat-icon>
+  </button>
+  <button mat-mini-fab color="accent" (click)="topCar.next()" class="btn-next">
+    <mat-icon>east</mat-icon>
+  </button>
+</div>

@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h3 class="title-section">Отзывы</h3>
+    </div>
+  </div>
+  <div class="carousel">
+    <owl-carousel-o [options]="reviewsOptions" #reviewCar>
+
+      <ng-container *ngFor="let slide of reviews">
+        <ng-template carouselSlide>
+          <div class="row">
+            <div class="col-sm-12 review">
+              <div class="review-text">
+                <div class="review-name">
+                  <p>{{slide.name}}</p>
+                  <a href="#"><img src="assets/img/inst_review.svg" alt="instagram" class="insta"></a>
+                </div>
+                <div class="review-description" [innerHTML]="slide.description"></div>
+              </div>
+              <div class="review-image">
+                <img src="{{bseUrl}}/{{slide.image}}" alt="{{slide.name}}">
+              </div>
+            </div>
+          </div>
+        </ng-template>
+      </ng-container>
+
+    </owl-carousel-o>
+
+    <a (click)="reviewCar.prev()" class="btn-prev"><mat-icon>west</mat-icon></a>
+    <a (click)="reviewCar.next()" class="btn-next"><mat-icon>east</mat-icon></a>
+  </div>
+</div>
