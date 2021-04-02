@@ -5,8 +5,11 @@
 }
 .advantage-wrapper {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
   .advantage {
     text-align: center;
+    width: 280px;
   }
 }
 .name {

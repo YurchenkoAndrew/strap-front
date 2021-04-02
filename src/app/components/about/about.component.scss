@@ -1,0 +1,45 @@
+.title-section {
+  text-align: center;
+  font-size: 2rem;
+  padding: 88px 0;
+}
+.one, .two {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1rem;
+  font-weight: 300;
+  text-align: justify;
+}
+.image-one, .image-two{
+  margin: 2rem;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+.black {
+  background: #25282B;
+  color: white;
+}
+
+.image-third, .image-four{
+  margin: 2rem;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+.text-third {
+  display: flex;
+  justify-content: center;
+  text-align: justify;
+  font-size: 1rem;
+  font-weight: 300;
+  @media (min-width: 658px) {
+    margin: 2rem;
+  }
+  @media (max-width: 657px) {
+    margin-top: 2rem;
+  }
+  height: 100%;
+}

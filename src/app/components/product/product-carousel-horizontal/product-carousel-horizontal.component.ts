@@ -1,4 +1,4 @@
-import {Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {Product} from '../../../models/product';
 import {environment} from '../../../../environments/environment';
 import {OwlOptions, SlidesOutputData} from 'ngx-owl-carousel-o';
@@ -8,11 +8,10 @@ import {OwlOptions, SlidesOutputData} from 'ngx-owl-carousel-o';
   templateUrl: './product-carousel-horizontal.component.html',
   styleUrls: ['./product-carousel-horizontal.component.scss']
 })
-export class ProductCarouselHorizontalComponent implements OnInit, OnChanges {
+export class ProductCarouselHorizontalComponent implements OnInit {
 
   @Input() product!: Product;
   baseUrl = environment.baseUrl;
-  @Input() slideEvent!: string;
 
   bFoolCarouselOptions: OwlOptions = {
     loop: true,
@@ -45,9 +44,5 @@ export class ProductCarouselHorizontalComponent implements OnInit, OnChanges {
   }
 
   ngOnInit(): void {
-  }
-
-  ngOnChanges(changes: SimpleChanges): void {
-    console.log(this.slideEvent);
   }
 }

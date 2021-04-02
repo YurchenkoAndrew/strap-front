@@ -2,7 +2,7 @@
   <p class="name-product">{{product.name}}</p>
   <div [innerHTML]="product.description"></div>
   <div class="product-price">
-    <a href="" class="button"
+    <a href="https://wa.me/{{setting.whatsapp}}?text=Добрый день! Хотим сделать заказ" target="_blank" class="button"
        [class.button-black]="product.block_type_id === 2 || product.block_type_id === 4"
        [class.button-white]="product.block_type_id === 1 || product.block_type_id === 3"
     >Заказать</a>

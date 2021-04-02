@@ -1,7 +1,9 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {Setting} from '../../models/setting';
-import {SettingsService} from '../../data/services/settings.service';
 import {environment} from '../../../environments/environment';
+import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
+import {Observable} from 'rxjs';
+import {map, shareReplay} from 'rxjs/operators';
 
 @Component({
   selector: 'app-navigation',
@@ -10,21 +12,18 @@ import {environment} from '../../../environments/environment';
 })
 export class NavigationComponent implements OnInit {
 
-  setting!: Setting;
+  @Input() setting!: Setting;
   baseUrl = environment.baseUrl;
 
+  isNoHandset: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
+    .pipe(map(result => !result.matches),
+      shareReplay()
+    );
   constructor(
-    private service: SettingsService
-  ) { }
+    private breakpointObserver: BreakpointObserver,
+  ) {
+  }
 
   ngOnInit(): void {
-    this.initSetting();
   }
-
-  initSetting(): void {
-    this.service.get(1).subscribe(response => {
-      this.setting = response;
-    });
-  }
-
 }

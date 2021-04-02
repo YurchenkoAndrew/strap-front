@@ -36,7 +36,9 @@ export class ReviewComponent implements OnInit {
         items: 1
       }
     },
-    nav: false
+    nav: false,
+    autoWidth: true,
+    autoHeight: true
   };
 
   constructor(private service: ReviewService) {

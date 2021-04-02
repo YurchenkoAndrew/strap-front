@@ -1,14 +1,20 @@
-<section id="navigation">
-  <app-navigation></app-navigation>
+<section id="top">
+  <app-navigation
+    [setting]="setting"
+  ></app-navigation>
 </section>
 <section id="top-carousel">
-  <app-top-carousel></app-top-carousel>
+  <app-top-carousel
+    [setting]="setting"
+  ></app-top-carousel>
 </section>
 <section id="info">
   <app-info></app-info>
 </section>
 <section id="products">
-  <app-product></app-product>
+  <app-product
+    [setting]="setting"
+  ></app-product>
 </section>
 <section id="our-advantages">
   <app-our-advantages></app-our-advantages>
@@ -19,3 +25,12 @@
 <section id="reviews">
   <app-review></app-review>
 </section>
+<section id="about">
+  <app-about></app-about>
+</section>
+<section id="delivery">
+  <app-delivery></app-delivery>
+</section>
+<app-footer
+  [setting]="setting"
+></app-footer>

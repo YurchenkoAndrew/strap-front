@@ -1,0 +1,17 @@
+<div class="container" *ngIf="setting">
+  <div class="row">
+    <div class="col-sm-4 address">
+      <p>{{setting.address}}</p>
+    </div>
+    <div class="col-sm-4 logo">
+      <img src="{{baseUrl}}/{{setting.logo}}" alt="{{setting.name}}">
+    </div>
+    <div class="col-sm-4 phone">
+      <a class="phone-number" href="tel:{{setting.phone}}">{{setting.phone}}</a>
+      <a href="https://wa.me/{{setting.whatsapp}}?text=Добрый день! Хотим сделать заказ" target="_blank"><img src="assets/img/wp.svg" alt="whatsapp"></a>
+      <a href="{{setting.instagram}}" target="_blank">
+        <img src="assets/img/inst.svg" alt="Instagram">
+      </a>
+    </div>
+  </div>
+</div>

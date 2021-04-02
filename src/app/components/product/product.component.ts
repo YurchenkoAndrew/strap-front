@@ -1,8 +1,9 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {Product} from '../../models/product';
 import {ProductService} from '../../data/services/product.service';
 import {environment} from '../../../environments/environment';
 import {OwlOptions} from 'ngx-owl-carousel-o';
+import {Setting} from '../../models/setting';
 
 @Component({
   selector: 'app-product',
@@ -11,9 +12,9 @@ import {OwlOptions} from 'ngx-owl-carousel-o';
 })
 export class ProductComponent implements OnInit {
 
+  @Input() setting!: Setting;
   products!: Product[];
   baseUrl = environment.baseUrl;
-  slideEvent!: string;
 
   bFoolCarouselOptions: OwlOptions = {
     loop: true,
@@ -54,9 +55,4 @@ export class ProductComponent implements OnInit {
       this.products = response;
     });
   }
-
-  setSlideEvent(event: string): void {
-    this.slideEvent = event;
-  }
-
 }

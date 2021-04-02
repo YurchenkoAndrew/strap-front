@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h3 class="title-section">О нас</h3>
+    </div>
+  </div>
+  <div class="row" *ngIf="about">
+    <div class="col-sm-6 one">
+      <div class="text-one" [innerHTML]="about.text_one"></div>
+      <div class="image-one">
+        <img src="{{baseUrl}}/{{about.image_one}}" alt="about">
+      </div>
+    </div>
+    <div class="col-sm-6 two">
+      <div class="image-two">
+        <img src="{{baseUrl}}/{{about.image_two}}" alt="about">
+      </div>
+      <div class="text-two" [innerHTML]="about.text_two"></div>
+    </div>
+  </div>
+</div>
+<div class="black" *ngIf="about">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="text-third">
+          <div [innerHTML]="about.text_third"></div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="image-third">
+          <img src="{{baseUrl}}/{{about.image_third}}" alt="about">
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="image-four">
+          <img src="{{baseUrl}}/{{about.image_four}}" alt="about">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -11,14 +11,14 @@
         <ng-template carouselSlide>
           <div class="row">
             <div class="col-sm-12 review">
-              <div class="review-text">
+              <div class="col-sm-12 col-md-7 col-lg-8 col-xl-8 review-text">
                 <div class="review-name">
                   <p>{{slide.name}}</p>
-                  <a href="#"><img src="assets/img/inst_review.svg" alt="instagram" class="insta"></a>
+                  <a href="{{slide.instagram}}" target="_blank"><img src="assets/img/inst_review.svg" alt="instagram" class="insta"></a>
                 </div>
                 <div class="review-description" [innerHTML]="slide.description"></div>
               </div>
-              <div class="review-image">
+              <div class="col-sm-12 col-md-5 col-lg-4 col-xl-4 review-image">
                 <img src="{{bseUrl}}/{{slide.image}}" alt="{{slide.name}}">
               </div>
             </div>

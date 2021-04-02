@@ -1,7 +1,26 @@
 .navigation-carousel-wrapper {
   position: absolute;
   bottom: 10px;
-  right: -35%;
+  @media (max-width: 1024px) {
+    right: -35%;
+    bottom: 10px;
+  }
+  @media (min-width: 1025px) {
+    right: -35%;
+    bottom: 10px;
+  }
+  @media (max-width: 769px) {
+    right: 0;
+    bottom: -26%;
+  }
+  @media (max-width: 425px) {
+    right: 0;
+    bottom: -50%;
+  }
+  @media (max-width: 360px) {
+    right: 0;
+    bottom: -70%;
+  }
   z-index: 100;
   div{
     a {

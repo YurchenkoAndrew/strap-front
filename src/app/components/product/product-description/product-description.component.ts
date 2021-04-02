@@ -1,5 +1,6 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {Product} from '../../../models/product';
+import {Setting} from '../../../models/setting';
 
 @Component({
   selector: 'app-product-description',
@@ -9,20 +10,11 @@ import {Product} from '../../../models/product';
 export class ProductDescriptionComponent implements OnInit {
 
   @Input() product!: Product;
-  @Output() slideEvent: EventEmitter<string> = new EventEmitter<string>();
+  @Input() setting!: Setting;
 
   constructor() {
   }
 
   ngOnInit(): void {
-  }
-
-  prevSlide(): void {
-    this.slideEvent.emit('prev');
-
-  }
-
-  nextSlide(): void {
-    this.slideEvent.emit('next');
   }
 }

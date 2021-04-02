@@ -1,0 +1,27 @@
+.phone, .address, .logo {
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
+}
+.address {
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+.logo {
+  justify-content: center;
+}
+.phone {
+  justify-content: flex-end;
+  img{
+    margin: 0 1rem 0 0;
+  }
+  a{
+    margin: 0 1rem 0 0;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  a.phone-number {
+    text-decoration: none;
+    color: black;
+  }
+}

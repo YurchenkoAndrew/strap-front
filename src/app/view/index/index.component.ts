@@ -1,4 +1,6 @@
 import {Component, OnInit} from '@angular/core';
+import {SettingsService} from '../../data/services/settings.service';
+import {Setting} from '../../models/setting';
 
 @Component({
   selector: 'app-index',
@@ -7,9 +9,21 @@ import {Component, OnInit} from '@angular/core';
 })
 export class IndexComponent implements OnInit {
 
-  constructor() { }
+  setting!: Setting;
+
+  constructor(
+    private service: SettingsService
+  ) {
+  }
 
   ngOnInit(): void {
+    this.initSetting();
+  }
+
+  initSetting(): void {
+    this.service.get(1).subscribe(response => {
+      this.setting = response;
+    });
   }
 
 }

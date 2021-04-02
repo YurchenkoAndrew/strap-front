@@ -1,23 +1,27 @@
 <mat-toolbar>
     <div class="header">
       <div class="logo" *ngIf="setting">
-        <img src="{{baseUrl}}/{{setting.logo}}" alt="{{setting.name}}">
+        <a routerLink="/" fragment="top">
+          <img src="{{baseUrl}}/{{setting.logo}}" alt="{{setting.name}}">
+        </a>
           <p class="logo-text">{{setting.name}}</p>
       </div>
-      <div class="menu">
+      <div class="menu" *ngIf="isNoHandset | async">
         <ul>
-          <li><a href="/">Виды ремешков</a></li>
-          <li><a href="/">Преимущества</a></li>
-          <li><a href="/">Товары</a></li>
-          <li><a href="/">Отзывы</a></li>
-          <li><a href="/">О нас</a></li>
-          <li><a href="/">Доставка и оплата</a></li>
+          <li><a [routerLink]="['/']" fragment="products">Виды ремешков</a></li>
+          <li><a [routerLink]="['/']" fragment="our-advantages">Преимущества</a></li>
+          <li><a [routerLink]="['/']" fragment="slider-products">Товары</a></li>
+          <li><a [routerLink]="['/']" fragment="reviews">Отзывы</a></li>
+          <li><a [routerLink]="['/']" fragment="about">О нас</a></li>
+          <li><a [routerLink]="['/']" fragment="delivery">Доставка и оплата</a></li>
         </ul>
       </div>
       <div class="phone" *ngIf="setting">
-        <p class="phone-number">{{setting.phone}}</p>
-        <img src="assets/img/wp.svg" alt="whatsapp">
-        <img src="assets/img/inst.svg" alt="whatsapp">
+        <a class="phone-number" href="tel:{{setting.phone}}">{{setting.phone}}</a>
+        <a href="https://wa.me/{{setting.whatsapp}}?text=Добрый день! Хотим сделать заказ" target="_blank"><img src="assets/img/wp.svg" alt="whatsapp"></a>
+        <a href="{{setting.instagram}}" target="_blank">
+          <img src="assets/img/inst.svg" alt="Instagram">
+        </a>
       </div>
     </div>
 </mat-toolbar>

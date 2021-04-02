@@ -1,8 +1,9 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {OwlOptions} from 'ngx-owl-carousel-o';
 import {TopCarouselService} from '../../data/services/top-carousel.service';
 import {TopCarousel} from '../../models/top-carousel';
 import {environment} from '../../../environments/environment';
+import {Setting} from '../../models/setting';
 
 @Component({
   selector: 'app-top-carousel',
@@ -10,6 +11,8 @@ import {environment} from '../../../environments/environment';
   styleUrls: ['./top-carousel.component.scss']
 })
 export class TopCarouselComponent implements OnInit {
+
+  @Input() setting!: Setting;
 
   topCarouselOptions: OwlOptions = {
     loop: true,

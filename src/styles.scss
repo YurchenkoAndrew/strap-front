@@ -49,13 +49,24 @@ $strap-theme: mat-light-theme((
 
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: 'Source Sans Pro', serif; }
-* { font-family: 'Source Sans Pro', serif; }
+html, body {
+  height: 100%;
+  //overflow-x: hidden;
+  scroll-behavior: smooth !important;
+}
+
+body {
+  margin: 0;
+  font-family: 'Source Sans Pro', serif;
+}
+
+* {
+  font-family: 'Source Sans Pro', serif;
+}
 
 .mat-toolbar-row, .mat-toolbar-single-row {
   height: auto;
-  //background: white;
+  background: white;
 }
 
 .product-price {
@@ -65,4 +76,14 @@ body { margin: 0; font-family: 'Source Sans Pro', serif; }
   align-items: center;
   font-size: 22px;
   font-family: 'Source Sans Pro', serif;
+}
+
+.black-block {
+  background: #25282B;
+  color: white;
+  text-align: justify;
+  padding: 1rem;
+}
+.container, .container-sm {
+  width: auto;
 }

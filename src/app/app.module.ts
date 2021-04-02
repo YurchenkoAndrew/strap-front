@@ -28,6 +28,12 @@ import {SliderProductsComponent} from './components/slider-products/slider-produ
 import {SLIDER_PRODUCT_URL_TOKEN} from './data/services/slider-product.service';
 import {REVIEW_URL_TOKEN} from './data/services/review.service';
 import {ReviewComponent} from './components/review/review.component';
+import {ABOUT_URL_TOKEN} from './data/services/about.service';
+import {AboutComponent} from './components/about/about.component';
+import {DELIVERY_URL_TOKEN} from './data/services/delivery.service';
+import {DeliveryComponent} from './components/delivery/delivery.component';
+import {FooterComponent} from './components/footer/footer.component';
+import {LayoutModule} from '@angular/cdk/layout';
 
 @NgModule({
   declarations: [
@@ -43,6 +49,9 @@ import {ReviewComponent} from './components/review/review.component';
     OurAdvantagesComponent,
     SliderProductsComponent,
     ReviewComponent,
+    AboutComponent,
+    DeliveryComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
@@ -52,7 +61,8 @@ import {ReviewComponent} from './components/review/review.component';
     MatToolbarModule,
     MatIconModule,
     CarouselModule,
-    MatButtonModule
+    MatButtonModule,
+    LayoutModule,
   ],
   providers: [
     {
@@ -82,6 +92,14 @@ import {ReviewComponent} from './components/review/review.component';
     {
       provide: REVIEW_URL_TOKEN,
       useValue: `${environment.baseUrlApi}/reviews`
+    },
+    {
+      provide: ABOUT_URL_TOKEN,
+      useValue: `${environment.baseUrlApi}/about`
+    },
+    {
+      provide: DELIVERY_URL_TOKEN,
+      useValue: `${environment.baseUrlApi}/delivery`
     },
   ],
   bootstrap: [AppComponent]
