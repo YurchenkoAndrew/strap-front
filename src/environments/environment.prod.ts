@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
-  baseUrl: 'http://www.strap.wsa',
-  baseUrlApi: 'http://www.strap.wsa/api',
+  baseUrl: 'https://strap-admin.a-lux.dev',
+  baseUrlApi: 'https://strap-admin.a-lux.dev/api',
 };
