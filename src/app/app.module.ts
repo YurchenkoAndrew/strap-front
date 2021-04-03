@@ -34,6 +34,7 @@ import {DELIVERY_URL_TOKEN} from './data/services/delivery.service';
 import {DeliveryComponent} from './components/delivery/delivery.component';
 import {FooterComponent} from './components/footer/footer.component';
 import {LayoutModule} from '@angular/cdk/layout';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
@@ -63,6 +64,7 @@ import {LayoutModule} from '@angular/cdk/layout';
     CarouselModule,
     MatButtonModule,
     LayoutModule,
+    MatProgressSpinnerModule
   ],
   providers: [
     {

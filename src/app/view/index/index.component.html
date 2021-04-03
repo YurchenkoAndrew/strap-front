@@ -1,36 +1,45 @@
-<section id="top">
-  <app-navigation
+<div class="main-wrapper" *ngIf="setting else load">
+
+  <section id="top">
+    <app-navigation
+      [setting]="setting"
+    ></app-navigation>
+  </section>
+  <section id="top-carousel">
+    <app-top-carousel
+      [setting]="setting"
+    ></app-top-carousel>
+  </section>
+  <section id="info">
+    <app-info></app-info>
+  </section>
+  <section id="products">
+    <app-product
+      [setting]="setting"
+    ></app-product>
+  </section>
+  <section id="our-advantages">
+    <app-our-advantages></app-our-advantages>
+  </section>
+  <section id="slider-products">
+    <app-slider-products></app-slider-products>
+  </section>
+  <section id="reviews">
+    <app-review></app-review>
+  </section>
+  <section id="about">
+    <app-about></app-about>
+  </section>
+  <section id="delivery">
+    <app-delivery></app-delivery>
+  </section>
+  <app-footer
     [setting]="setting"
-  ></app-navigation>
-</section>
-<section id="top-carousel">
-  <app-top-carousel
-    [setting]="setting"
-  ></app-top-carousel>
-</section>
-<section id="info">
-  <app-info></app-info>
-</section>
-<section id="products">
-  <app-product
-    [setting]="setting"
-  ></app-product>
-</section>
-<section id="our-advantages">
-  <app-our-advantages></app-our-advantages>
-</section>
-<section id="slider-products">
-  <app-slider-products></app-slider-products>
-</section>
-<section id="reviews">
-  <app-review></app-review>
-</section>
-<section id="about">
-  <app-about></app-about>
-</section>
-<section id="delivery">
-  <app-delivery></app-delivery>
-</section>
-<app-footer
-  [setting]="setting"
-></app-footer>
+  ></app-footer>
+</div>
+
+<ng-template #load>
+  <div style="display: flex; justify-content: center; align-items: center; width: 100%; height: 100vh">
+    <mat-spinner></mat-spinner>
+  </div>
+</ng-template>
